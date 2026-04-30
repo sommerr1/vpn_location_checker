@@ -5,7 +5,7 @@ $ip = (Invoke-WebRequest -Uri "https://api.ipify.org").Content
 $geo = Invoke-WebRequest -Uri "http://ip-api.com/json/$ip?fields=status,country,countryCode,regionName,city,isp,query" | ConvertFrom-Json
 
 if ($geo.status -ne "success") {
-    Write-Host "Ошибка получения геоданных"
+    Write-Host "error getting geodata"
     exit
 }
 
