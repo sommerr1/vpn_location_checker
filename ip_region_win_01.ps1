@@ -1,3 +1,5 @@
+Write-Host "HELLO WORLD — скрипт запущен!"
+
 # Получаем внешний IP
 $ip = (Invoke-WebRequest -Uri "https://api.ipify.org").Content
 
